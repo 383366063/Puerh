@@ -334,9 +334,9 @@
         
       // add by @sofish
       // adjust backdrop height
-      var htmlHeight = $('html').height(),
-          backDrop = $('.modal-backdrop');
-	  backDrop.length && backDrop.height(htmlHeight);
+      //var htmlHeight = $('html').height(),
+      //    backDrop = $('.modal-backdrop');
+	  //backDrop.length && backDrop.height(htmlHeight);
 
       if (this.options.backdrop != 'static') {
         this.$backdrop.click($.proxy(this.hide, this))

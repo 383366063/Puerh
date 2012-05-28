@@ -710,7 +710,19 @@ _position:relative; /* fix 多一只猪的问题 */
 .modal-title{background:#eee;height:30px;line-height:30px;padding:0 20px;}
 .modal-content{padding:15px 20px;}
 .modal .close{position:absolute;top:6px;right:20px;}
-.modal-backdrop{position:absolute;top:0;left:0;height:100%;width:100%;background:rgba(0,0,0,0.6);z-index:1001;}
+.modal-backdrop{
+	position:fixed;
+	top:0;left:0;right:0;bottom:0;
+	z-index:1001;
+	_position:absolute;
+	_width: 100%;
+	_height: expression(document.body.clientHeight);
+	background:black;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGCYCQAAngCaYaR2fwAAAABJRU5ErkJggg==);
+	background:rgba(0,0,0,0.6);
+	_background:black;
+	*filter: alpha(opacity=60);
+}
 
 /* Dropdown 下拉菜单
  * author: linjianfeng@baixing.com
