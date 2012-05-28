@@ -12,6 +12,26 @@ body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset,
 	padding: 0;
 }
 
+/*	使用body上的scrollbar，
+	避免IE6、IE7的标准模式下scrollbar抢夺用户焦点，
+	同时允许fixed定位元素覆盖scrollbar（如modal-backdrop），
+	且允许在非positioned的body下插入absolute定位元素来模拟fixed。
+*/
+/*  是否启用有待讨论
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	margin: 0;
+}
+*/
+
 /* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -198,6 +218,7 @@ Based on 960 Grid System - http://960.gs/
 Licensed under GPL and MIT.
 */
 
+/* 如启用body scrollbar，必须确保body scrollbar能显现出来，需remove之 */
 body{ min-width:1000px}
 
 /* layout container for the grid */
@@ -703,7 +724,7 @@ _position:relative; /* fix 多一只猪的问题 */
 .filter-block .filter-item{width:160px;padding-right:20px;font-size:12px;color:#888;}
 .filter-block .filter-item-cap{display:block;font-size:14px;}
 
-/* Dropdown 下拉菜单
+/* Modal 模态对话框
  * author: linjianfeng@baixing.com
  */
 .modal{position:absolute;z-index:1002;border:4px solid #434343;background:#fff;width:560px;}
